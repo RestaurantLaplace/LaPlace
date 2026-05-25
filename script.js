@@ -20,7 +20,10 @@ const CONFIG = {
   RESTAURANT_NAME: 'Restaurant La Place',
 };
 
-/* ==================== IMAGES PAR DÉFAUT ==================== */
+/* ==================== IMAGES PAR DÉFAUT ====================
+   Si JSONBin n'est pas configuré, on utilise les images
+   existantes du repo (PLACE2.jpg, PLACE3.jpg, etc.)
+*/
 const DEFAULT_IMAGES = {
   hero: ['images/PLACE3.jpg'],
   gallery: [
@@ -71,22 +74,16 @@ const DEFAULT_IMAGES = {
   targets.forEach(t => io.observe(t));
 })();
 
-/* ==================== 4. IMAGE STORE (CORS FIXED) ==================== */
+/* ==================== 4. IMAGE STORE ==================== */
 async function loadImageStore() {
   if (CONFIG.JSONBIN_ID) {
     try {
-
-      // ✅ CORS FIX: no custom headers → avoids OPTIONS preflight
-      const url = CONFIG.JSONBIN_READ_KEY
-        ? `https://api.jsonbin.io/v3/b/${CONFIG.JSONBIN_ID}/latest?X-Access-Key=${CONFIG.JSONBIN_READ_KEY}`
-        : `https://api.jsonbin.io/v3/b/${CONFIG.JSONBIN_ID}/latest`;
-
-      const res = await fetch(url);
-
+      const headers = {};
+      if (CONFIG.JSONBIN_READ_KEY) headers['X-Access-Key'] = CONFIG.JSONBIN_READ_KEY;
+      const res = await fetch(`https://api.jsonbin.io/v3/b/${CONFIG.JSONBIN_ID}/latest`, { headers });
       if (res.ok) {
         const data = await res.json();
         const record = data.record || data;
-
         return {
           hero: (record.hero && record.hero.length) ? record.hero : DEFAULT_IMAGES.hero,
           gallery: (record.gallery && record.gallery.length) ? record.gallery : DEFAULT_IMAGES.gallery,
@@ -126,6 +123,7 @@ async function loadImageStore() {
       return;
     }
 
+    // Render up to 6 images, repeat if fewer
     const slots = 6;
     for (let i = 0; i < slots; i++) {
       const url = images[i % images.length];
@@ -151,6 +149,7 @@ async function loadImageStore() {
   const form = document.getElementById('bookingForm');
   if (!form) return;
 
+  // Date min = aujourd'hui
   const dateInput = document.getElementById('date');
   if (dateInput) {
     const today = new Date().toISOString().split('T')[0];
@@ -158,6 +157,7 @@ async function loadImageStore() {
     dateInput.value = today;
   }
 
+  // Compteur invités
   const guestsInput = document.getElementById('guests');
   document.querySelectorAll('.counter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -169,6 +169,7 @@ async function loadImageStore() {
     });
   });
 
+  // Total des plats
   const cartTotalEl = document.getElementById('cartTotal');
   const dishCheckboxes = document.querySelectorAll('.dish-item input[type=checkbox]');
 
@@ -185,6 +186,7 @@ async function loadImageStore() {
 
   dishCheckboxes.forEach(cb => cb.addEventListener('change', updateTotal));
 
+  // Helpers
   function showError(name, msg) {
     const el = form.querySelector(`.field-error[data-for="${name}"]`);
     if (el) el.textContent = msg || '';
@@ -244,7 +246,6 @@ async function loadImageStore() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-
     const data = {
       name: document.getElementById('name').value.trim(),
       date: document.getElementById('date').value,
@@ -258,8 +259,11 @@ async function loadImageStore() {
     const dishes = getSelectedDishes();
     const total = updateTotal();
 
-    let msg = `*Nouvelle demande de réservation*\n\n`;
-    msg += `🏛️ ${CONFIG.RESTAURANT_NAME}\n\n`;
+    // Construction du message WhatsApp
+    let msg = `*Nouvelle demande de réservation*\n`;
+    msg += `\n`;
+    msg += `🏛️ ${CONFIG.RESTAURANT_NAME}\n`;
+    msg += `\n`;
     msg += `👤 Nom : ${data.name}\n`;
     msg += `📅 Date : ${formatDate(data.date)}\n`;
     msg += `🕐 Heure : ${data.time}\n`;
@@ -285,8 +289,8 @@ async function loadImageStore() {
     if (btn) {
       btn.disabled = true;
       btn.style.opacity = '0.7';
-      const span = btn.querySelector('span:last-child');
-      if (span) span.textContent = 'Redirection...';
+      btn.querySelector('span:last-child') &&
+        (btn.querySelector('span:last-child').textContent = 'Redirection...');
     }
 
     window.location.href = url;
