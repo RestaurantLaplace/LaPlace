@@ -1,820 +1,402 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-<title>La Place</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Meilleur Restaurant Au Bout D Ait Ben Haddou">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
-<link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
-<link href="plugins/jquery-timepicker/jquery.timepicker.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
-<style>
-    #orderId {
-    font-weight: bold;
-    }
-    .menu-container{
-		margin-left: 160px;
-	}
-    img[src*="home.jpg"] {
-      /* Apply blur effect to images with src containing "home.jpg" */
-      filter: blur(3px);
-	  width: max-content;
-    }
-	.menu-box ul li:hover {
-    color: green; /* Change text color on hover */
-    transition: color 0.3s ease; /* Add smooth transition */
-  	}
-	.col{
-		margin-top: 40px;
-		margin-bottom: 40px;
-	}
-	.footer_contact_title{
-		width:fit-content;
-	}
-	.CONTACT{
-		margin-top: 40px;
-	}
-	.col-lg-6{
-		margin-left: 60px;
-	}
-	#totalPrice {
-    font-weight: bold;
-    color: red;
-  	}
-	.Price{
-		color: black;
-		margin-top: 40px;
-	}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO PRIMAIRE -->
+  <title>Restaurant La Place — Cuisine Marocaine Berbère à Aït Ben Haddou, Ouarzazate</title>
+  <meta name="description" content="Restaurant La Place, au cœur du ksar d'Aït Ben Haddou classé UNESCO. Cuisine marocaine berbère authentique, tajines, couscous royal, terrasse avec vue. 21 ans d'expérience. Réservation directe par WhatsApp." />
+  <meta name="keywords" content="restaurant Aït Ben Haddou, restaurant Ouarzazate, cuisine berbère, tajine Maroc, restaurant ksar, où manger Aït Ben Haddou, restaurant UNESCO Maroc, La Place" />
+  <meta name="author" content="Restaurant La Place" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://restaurantlaplace.github.io/LaPlace/" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="restaurant.restaurant" />
+  <meta property="og:title" content="Restaurant La Place — Aït Ben Haddou" />
+  <meta property="og:description" content="Cuisine marocaine berbère au cœur du ksar d'Aït Ben Haddou, site UNESCO." />
+  <meta property="og:image" content="https://restaurantlaplace.github.io/LaPlace/images/PLACE3.jpg" />
+  <meta property="og:url" content="https://restaurantlaplace.github.io/LaPlace/" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Restaurant La Place" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Restaurant La Place — Aït Ben Haddou" />
+  <meta name="twitter:description" content="Cuisine marocaine berbère au ksar UNESCO d'Aït Ben Haddou." />
+  <meta name="twitter:image" content="https://restaurantlaplace.github.io/LaPlace/images/PLACE3.jpg" />
+
+  <!-- GÉO -->
+  <meta name="geo.region" content="MA-09" />
+  <meta name="geo.placename" content="Aït Ben Haddou, Ouarzazate" />
+  <meta name="geo.position" content="31.0439639;-7.1316642" />
+  <meta name="ICBM" content="31.0439639, -7.1316642" />
+
+  <!-- ICONES -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <meta name="theme-color" content="#a0522d" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- POLICES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- DONNÉES STRUCTURÉES -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Restaurant La Place",
+    "alternateName": "Café restaurant laplace",
+    "image": [
+      "https://restaurantlaplace.github.io/LaPlace/images/PLACE3.jpg",
+      "https://restaurantlaplace.github.io/LaPlace/images/PLACE2.jpg"
+    ],
+    "@id": "https://restaurantlaplace.github.io/LaPlace/",
+    "url": "https://restaurantlaplace.github.io/LaPlace/",
+    "telephone": "+212661560086",
+    "email": "Restaurant_laplace@hotmail.com",
+    "priceRange": "$$",
+    "servesCuisine": ["Moroccan", "Berber", "Mediterranean"],
+    "description": "Restaurant marocain berbère situé dans le ksar d'Aït Ben Haddou, classé au patrimoine mondial de l'UNESCO. 21 ans d'expérience.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Près de la mosquée, Aït Ben Haddou",
+      "addressLocality": "Ouarzazate",
+      "postalCode": "45000",
+      "addressCountry": "MA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 31.0439639,
+      "longitude": -7.1316642
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "11:00",
+      "closes": "22:00"
+    }],
+    "acceptsReservations": "True",
+    "menu": "https://restaurantlaplace.github.io/LaPlace/#menu"
+  }
+  </script>
 </head>
-<body><div class="super_container">
-	
-	<!-- Header -->
-	<header class="header">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="header_content d-flex flex-row align-items-center justify-content-start">
-						<div class="logo">
-							<a href="#">
-								<div>La Place</div>
-								<div>restaurant</div>
-							</a>
-						</div>
-				</div>
-			</div>
-		</div>
-	</header>
-	
-	<!-- Home -->
-	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/home.jpg" data-speed="0.8"></div>
-		<div class="home_container">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="home_content text-center">
-							<div class="home_subtitle page_subtitle">La Place Est</div>
-							<div class="home_title"><h1>Le meilleur Choix</h1></div>
-							<div class="home_text ml-auto mr-auto">
-								<p>Gouter Les Saveur Des Plats Marocaine Pendant que vous profitez de la vue envoûtante sur le site classé au patrimoine mondial de l'UNESCO d'Ait Ben Haddou</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="scroll_icon"></div>
-	</div>
-	<!-- Intro -->
-	<div class="intro">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="intro_content">
-						<div class="intro_subtitle page_subtitle">Philosophy</div>
-						<!-- <div class="intro_title"><h2></h2></div> -->
-						<div class="intro_text">
-							<p>Un charmant restaurant au milieu de village ait ben haddou .
-								Ait –ben haddou est un ksar sur la liste du patrimoine mondial de l’Unesco
-								Et a été utilisé comme scène de tournage pour de nombreux films tel que :
-								Lawrence d’Arabie au Gladiator.
-								Forts de notre expérience de 21 ans de table pour le restaurant berbère, nous
-								proposons désormais dans notre tout nouveau restaurant marocain, une cuisine à tous
-								les gourmands qui séjournent à ait ben haddou.
-								 Le temps d&#39;un déjeuner ou d&#39;un dîner, venez  découvrir les saveurs de nos plats typiquement
-								marocains avec une touche typiquement berbère, préparés avec l&#39;Amour du métier. Tous nos
-								produits sont frais, et proviennent de producteurs locaux. Dès que nous le pouvons, nous
-								favorisons les producteurs qui se lancent dans l&#39;agriculture biologique, qui se développe de
-								plus en plus au Maroc.
-								 Faire l&#39;expérience du restaurant la place, c&#39;est découvrir la qualité et l&#39;authenticité de la
-								cuisine marocaine berbère, relevée par ses épices, si délicats à utiliser. 1 salons et 1 terrasse
-								vous accueillent : les tables en boit, les canapés en boit et confortables. Les murs sont
-								recouverts de toitures anciennes et les plafonds sont à l&#39;origine de nombreuses traditions,
-								utilisant de nouvelles techniques de construction dans les maisons anciennes. L&#39;éclairage des
-								lustres suspendus ajoute une touche moderne au décor berbère coloré.</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xl-4 col-md-6 intro_col">
-							<div class="intro_image"><img src="images/PLACE3.jpg" alt="https://unsplash.com/@quanle2819"></div>
-						</div>
-						<div class="col-xl-4 col-md-6 intro_col">
-							<div class="intro_image"><img src="images/PLACE2.jpg" alt="https://unsplash.com/@fabmag"></div>
-						</div>
-					</div>
-				</div>	
-			</div>
-		</div>
-	</div>
-	<!-- The Menu -->
-	<div class="themenu">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="themenu_title_bar_container">
-						<div class="themenu_stars text-center page_subtitle">La Place</div>
-						<div class="themenu_title_bar d-flex flex-column align-items-center justify-content-center">
-							<div class="themenu_title">Le Menu</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row themenu_row">
-				<style>
-					body {
-					  font-family: Arial, sans-serif;
-					  margin: 0;
-					  padding: 20px;
-					}
-				
-					.menu-box {
-					  margin-top: 1px;
-					  background-color: #f9f9f9;
-					  border: 1px solid #ddd;
-					  border-radius: 5px;
-					  padding: 20px;
-					  margin-bottom: 2px;
-					  margin-left: 3PX;
-					}
-				
-					.menu-box h2 {
-					  margin-top: 40px;
-					}
-				
-					.menu-box ul {
-					  list-style-type: none;
-					  padding: 0;
-					}
-				
-					.menu-box ul li {
-					  margin-bottom: 10px;
-					}
-				
-					.menu-box h3 {
-					  margin-top: 20px;
-					  margin-bottom: 10px;
-					}
-				  </style>
-				</head>
-				<body>
-					<div class="menu-box">
-						<h2>LE MIDI</h2>
-						<ul>
-						  <li>Entrée, plat et dessert - 200 DH</li>
-						  <li>Entrée et plat – 170 DH</li>
-						  <li>Plat et dessert – 170 DH</li>
-						</ul>
-						<h3>Menu:</h3>
-						<ul>
-						  <li>Salade marocaine + Tajine au choix + Dessert au choix</li>
-						  <li>Soupe ou harira + Les pâtes au choix + Dessert</li>
-						  <li>Omelette au choix + Dessert</li>
-						  <li>Salade marocaine + Couscous</li>
-						  <li>Grillade marocaine + Salade + Boisson</li>
-						  <li>Pizza ou Tacos ou Panini + Dessert</li>
-						  <li>Brochettes au choix</li>
-						</ul>
-					  </div>
-					
-					  <div class="menu-box">
-						<h2>LE SOIR</h2>
-						<ul>
-						  <li>Entrée, plat et dessert – 220 DH</li>
-						  <li>Entrée et plat – 200 DH</li>
-						  <li>Plat et dessert – 200 DH</li>
-						</ul>
-						<h3>Menu:</h3>
-						<ul>
-							<li>Salade marocaine + Tajine au choix + Dessert au choix</li>
-							<li>Soupe ou harira + Les pâtes au choix + Dessert</li>
-							<li>Omelette au choix + Dessert</li>
-							<li>Salade marocaine + Couscous</li>
-							<li>Grillade marocaine + Salade + Boisson</li>
-							<li>Pizza ou Tacos ou Panini + Dessert</li>
-							<li>Brochettes au choix</li>
-					</ul>
-				  </div>
-				</body>
-				<style>
-					body {
-					  font-family: Arial, sans-serif;
-					  margin: 0;
-					  padding: 20px;
-					}
-				
-					.menu-box {
-					  background-color: #f9f9f9;
-					  border: 1px solid #ddd;
-					  border-radius: 5px;
-					  padding: 20px;
-					  margin-bottom: 20px;
-					}
-				
-					.menu-box h2 {
-					  margin-top: 0;
-					}
-				
-					.menu-box ul {
-					  list-style-type: none;
-					  padding: 0;
-					}
-				
-					.menu-box ul li {
-					  margin-bottom: 10px;
-					  cursor: pointer; /* Add cursor pointer for interactive feel */
-					}
-				
-					.menu-box h3 {
-					  margin-top: 20px;
-					  margin-bottom: 10px;
-					}
-				  </style>
-				</head>
-				<body>
-				
-				  <div class="menu-box">
-					<h2>LES PLATS</h2>
-					<ul>
-					  <li onclick="addToCommande('3 Brochettes poulet servi avec accompagnement au choix (riz, semoule, frites ou haricots verts frais) - 120 DH')">3 Brochettes poulet servi avec accompagnement au choix (riz, semoule, frites ou haricots verts frais) - 120 DH</li>
-					  <li onclick="addToCommande('Tajine de kefta à la tomate fraiche, aux œufs et aux épices du chef - 110 DH')">Tajine de kefta à la tomate fraiche, aux œufs et aux épices du chef - 110 DH</li>
-					  <li onclick="addToCommande('Tajine poulet (façon la place Beldi) aux citrons confits faits maison et olives vertes * - 150 DH')">Tajine poulet (façon la place Beldi) aux citrons confits faits maison et olives vertes * - 150 DH</li>
-					  <li onclick="addToCommande('Tajine de jarret d\'agneau aux petits poids et fonds d\'artichauts * - 150 DH')">Tajine de jarret d'agneau aux petits poids et fonds d'artichauts * - 150 DH</li>
-					  <li onclick="addToCommande('Tajine de jarret de boeuf aux pruneaux caramélisés et amandes: 150 DH')">Tajine de jarret de boeuf aux pruneaux caramélisés et amandes: 150 DH</li>
-					  <li onclick="addToCommande('Tajine viande aux figues et dattes - 140 DH')">Tajine viande aux figues et dattes - 140 DH</li>
-					  <li onclick="addToCommande('Briouates (5 briques farcies avec Kefta ou poulet) - 100 DH')">Briouates (5 briques farcies avec Kefta ou poulet) - 100 DH</li>
-					  <li onclick="addToCommande('Couscous Royal : agneau, poulet, légumes et tfaya (oignons, raisins secs caramélisés parfumés à la cannelle et fleur d\'oranger) - (sur commande) - 200 DH')">Couscous Royal : agneau, poulet, légumes et tfaya (oignons, raisins secs caramélisés parfumés à la cannelle et fleur d'oranger) - (sur commande) - 200 DH</li>
-					  <li onclick="addToCommande('Les pâtes aux choix (penne, spaghetti, fusilli, conchiglie, pipe rigate ) \n• Avec Sauce bolognaise 60DH \n• Avec Sauce blanche 60DH')">Les pâtes aux choix (penne, spaghetti, fusilli, conchiglie, pipe rigate ) <br>• Avec Sauce bolognaise 60DH <br> •Avec Sauce blanche 60DH</li>
-					</ul>
-				  </div>
-				  <div class="menu-box">
-					<h2>Végétariens :</h2>
-					<ul>
-					  <li>Tajine berbère * - 110 DH</li>
-					  <li>Briouates (5 briques farcies aux légumes de saison) - 100 DH</li>
-					  <li>Pastilla aux légumes - 100 DH</li>
-					  <li>Orange à la cannelle : 35 DH</li>
-					  <li>Salade de fruits à la fleur d’oranger : 50 DH</li>
-					  <li>Moëlleux au chocolat royal : 70 DH</li>
-					  <li>Thé ou café servi avec des pâtisseries marocaines : gateaux déférant : 40 DH</li>
-					</ul>
-				  </div>
-				  <div class="menu-box">
-					<h2>LES ENTRÉES</h2>
-					<ul>
-					  <li onclick="addToCommande('Salade berbère (tomates, poivrons, oignons et persil) – 35 DH')">Salade berbère (tomates, poivrons, oignons et persil) – 35 DH</li>
-					  <li onclick="addToCommande('Lentilles à l’échalotte et tomates – 30 DH')">Lentilles à l’échalotte et tomates – 30 DH</li>
-					  <li onclick="addToCommande('Omelette au choix (nature / fromage / aux herbes ) - 30 DH')">Omelette au choix (nature / fromage / aux herbes ) - 30 DH</li>
-					  <li onclick="addToCommande('Trio au choix parmi (sur commande) - 100 DH <br>• Zaalouk (aubergines)\n• Taktouka (poivrons à la tomate fraiche)\n• Courgettes à la coriandre\n• Betteraves à l\'échalotte\n• Carottes à la cannelle et fleur d\'oranger')">Trio au choix parmi (sur commande) - 100 DH <br>• Zaalouk (aubergines) <br>•Taktouka (poivrons à la tomate fraiche)<br>• Courgettes à la coriandre <br>• Betteraves à l\'échalottebr <br>• Carottes à la cannelle et fleur d\'oranger</li>
-					</ul>
-				  </div>
-				  
-				  <div class="menu-box">
-					<h2>LA P’TITE FAIM</h2>
-					<ul>
-					  <li>Bol de semoule : 30 DH</li>
-					  <li>Assiette de frites : 35 DH</li>
-					  <li>Trio de tomates à l'huile d'olive - 35 DH</li>
-					  <li>Kefta à la poêle - 45 DH</li>
-					  <li>Assiette de briouates (3 pièces) - 65 DH</li>
-					  <li>Harira berber (soupe traditionnelle marocaine - sans viande avec datte et chabakya) - 35 DH</li>
-					  <li>Omelette nature - 30 DH</li>
-					  <li>Omelette avec fromage, oignons ou champignons - 50 DH</li>
-					  <li>Salade Chamali (riz, thon, tomates, salade verte, carottes, betteraves et œuf dur) - 70 DH</li>
-					  <li>Sandwichs au choix (mixt-omelette-viande-fromage-saucisse) - 50 DH</li>
-					  <li>Panini au choix (viande-poulet-saucisse-thon) - 45 DH</li>
-					  <li>Tacos au choix (viande-poulet-saucisse-thon) - 50 DH</li>
-					  <li>Pizza au choix (thon, viande hachée, Margarita, végétarienne) - 50 DH</li>
-					</ul>
-				  </div>
-				  
-				  <div class="menu-box">
-					<h2>BOISSONS CHAUDES</h2>
-					<ul>
-					  <li>Café Noir – 10 DH</li>
-					  <li>Café noos-noos (café au lait) – 10 DH</li>
-					  <li>Café expresso - 20 DH</li>
-					  <li>Thé à la menthe – 15 DH</li>
-					  <li>Thé normal – 10 DH</li>
-					  <li>Louisa (verveine) – 10 DH</li>
-					</ul>
-				  </div>
-				  
-				  <div class="menu-box">
-					<h2>LES JUS MAISON</h2>
-					<ul>
-					  <li>Jus d’orange nature – 20 DH</li>
-					  <li>Jus de fruits frais (selon saison) : <br> citron, fraises, melon, pomme, banane – 30 DH</li>
-					  <li>Jus d'avocat – 30 DH</li>
-					  <li>Jus d’avocat fruit sec – 35 DH</li>
-					  <li>Jus d’orange + carotte – 30 DH</li>
-					  <li>Jus de concombre au citron et thym – 20 DH</li>
-					</ul>
-				  </div>
-				  
-				  <div class="menu-box">
-					<h2>EAUX MINERALES ET SODAS</h2>
-					<ul>
-					  <li>Eau minérale (plate ou gazeuse) 1.5 L. – 15 DH</li>
-					  <li>Eau Bien-être (eau minérale plate ou gazeuse avec citron et concombre ou menthe) – 20 DH</li>
-					  <li>Coca cola - 15 DH</li>
-					  <li>Schweppes citron ou tonic – 20 DH</li>
-					</ul>
-				  </div>
-				
-				  <script>
-					var commande = "";
-					function addToCommande(item) {
-					}
-				  </script>
-				</body> 
-	<!-- Reservations -->
-	<style>
-		body {
-		  font-family: Arial, sans-serif;
-		  margin: 0;
-		  padding: 0px;
-		}
-		.orderId{
-		  font-weight: bold;
-		}
-		.menu-container {
-		  max-width: 600px;
-		  margin: 0 auto;
-		  padding: 20px;
-		  border: 1px solid #ddd;
-		  border-radius: 5px;
-		}
-		
-		h2 {
-		  margin-top: 20px;
-		  margin-bottom: 10px;
-		  font-size: 24px;
-		}
-		
-		select {
-		  width: 100%;
-		  padding: 10px;
-		  margin-bottom: 20px;
-		  border: 1px solid #ccc;
-		  border-radius: 5px;
-		  font-size: 16px;
-		}
-	  </style>
-	  </head>
-	  <body>
-	  
-	  <div class="menu-container">
-		<style>
-			#reservationForm {
-			margin-top: 20px;
-			padding: 20px;
-			background-color: #ffffff;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			}
-			.form-group {
-			margin-bottom: 20px;
-			}
-			.heading {
-			font-size: 24px;
-			margin-bottom: 10px;
-			}
-			.controls {
-			margin-bottom: 10px;
-			}
-			.floatLabel {
-			width: 100%;
-			padding: 10px;
-			border: 1px solid #ccc;
-			border-radius: 5px;
-			font-size: 16px;
-			}
-			.floatLabel:focus {
-			outline: none;
-			border-color: #007bff;
-			}
-			.error-message {
-			display: block;
-			color: red;
-			font-size: 12px;
-			margin-top: 5px;
-			}
-			.grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-			gap: 10px;
-			}
-			.info-text {
-			font-size: 16px;
-			margin-bottom: 10px;
-			}
-			textarea.floatLabel {
-			min-height: 100px;
-			}
-			button.col-1-4 {
-			width: 100%;
-			width: 80px;
-			height: 40px;
-			padding: 10px;
-			border-radius: 5px;
-			margin-left: 120px;
-			margin-top:50px;
-			background-color: green;
-			color: white;
-			font-size: 16px;
-			border: none;
-			cursor: pointer;
-			}
-			button.col-1-4:hover {
-			background-color: darkgreen;
-			}
-		</style>
-		<form id="reservationForm">
-			<!-- General -->
-			<style>
-				.item-container {
-					position: relative;
-					margin-bottom: 5px;
-				}
-				.delete-button {
-					position: absolute;
-					right: 0;
-					top: 0;
-					background-color: #ff6347;
-					color: white;
-					border: none;
-					border-radius: 5px;
-					padding: 5px 10px;
-					cursor: pointer;
-				}
-				.delete-button:hover {
-					background-color: #d32f2f;
-				}
-			  </style>
-			<script>
-				var totalPrice = 0; // Initialize total price variable
-				var order = ""; // Initialize order variable
-			  
-				function displayItem() {
-				  var selectMenu = document.getElementById("menu");
-				  var selectedItem = selectMenu.options[selectMenu.selectedIndex].text;
-				  var displayDiv = document.getElementById("itemDisplay");
-				  var newItemContainer = document.createElement("div");
-				  newItemContainer.className = "item-container";
-				  
-				  var newItem = document.createElement("p");
-				  newItem.textContent = selectedItem;
-				  newItemContainer.appendChild(newItem);
-				  
-				  var deleteButton = document.createElement("button");
-				  deleteButton.textContent = "Retirer";
-				  deleteButton.className = "delete-button";
-				  deleteButton.onclick = function() {
-					displayDiv.removeChild(newItemContainer);
-					var price = parseInt(selectedItem.match(/\d+\s*DH/)); 
-					price = isNaN(price) ? 0 : price; 
-					totalPrice -= price;
-					document.getElementById("totalPrice").textContent = totalPrice + " DH";
-					order = order.replace(selectedItem + "\n", "");
-				  };
-				  newItemContainer.appendChild(deleteButton);
-				  
-				  displayDiv.appendChild(newItemContainer);
-			  
-				  var price = parseInt(selectedItem.match(/\d+\s*DH/)); 
-				  price = isNaN(price) ? 0 : price; 
-				  totalPrice += price;
-				  document.getElementById("totalPrice").textContent = totalPrice + " DH";
-			  
-				  order += selectedItem + "\n";
-				}
-			  </script>
-			<div class="form-group">
-			  <h2 class="heading">Reservation</h2>
-			  <h2>Restaurant Menu</h2>
-	  
-		<label for="menu">Choisissez Vos Plats (Vous Pouver Choisissez Plus d'Un Plats Vos <br> 	Choix enregistrer dans votre Panier au dessous avec le Prix Total) : </label>
-		<select id="menu" onchange="displayItem()">
-		  <option value="" disabled selected>Menu</option>
-		  <optgroup label="LE MIDI">
-			<option value="Entrée, plat et dessert - 200 DH">Entrée, plat et dessert - 200 DH</option>
-			<option value="Entrée et plat – 170 DH">Entrée et plat – 170 DH</option>
-			<option value="Plat et dessert – 170 DH">Plat et dessert – 170 DH</option>
-		  </optgroup>
-		  <optgroup label="LE SOIR">
-			<option value="Entrée, plat et dessert – 220 DH">Entrée, plat et dessert – 220 DH</option>
-			<option value="Entrée et plat – 200 DH">Entrée et plat – 200 DH</option>
-			<option value="Plat et dessert – 200 DH">Plat et dessert – 200 DH</option>
-		  </optgroup>
-		  <optgroup label="LES PLATS">
-			<option value="3 Brochettes poulet servi avec accompagnement au choix (riz, semoule, frites ou haricots verts frais) - 120 DH">3 Brochettes poulet servi avec accompagnement au choix (riz, semoule, frites ou haricots verts frais) - 120 DH</option>
-			<option value="Tajine de kefta à la tomate fraiche, aux œufs et aux épices du chef - 110 DH">Tajine de kefta à la tomate fraiche, aux œufs et aux épices du chef - 110 DH</option>
-			<option value="Tajine poulet (façon la place Beldi) aux citrons confits faits maison et olives vertes * - 150 DH">Tajine poulet (façon la place Beldi) aux citrons confits faits maison et olives vertes * - 150 DH</option>
-			<option value="Tajine de jarret d'agneau aux petits poids et fonds d'artichauts * - 150 DH">Tajine de jarret d'agneau aux petits poids et fonds d'artichauts * - 150 DH</option>
-			<option value="Tajine de jarret de boeuf aux pruneaux caramélisés et amandes: 150 DH">Tajine de jarret de boeuf aux pruneaux caramélisés et amandes: 150 DH</option>
-			<option value="Tajine viande aux figues et dattes - 140 DH">Tajine viande aux figues et dattes - 140 DH</option>
-			<option value="Briouates (5 briques farcies avec Kefta ou poulet) - 100 DH">Briouates (5 briques farcies avec Kefta ou poulet) - 100 DH</option>
-			<option value="Couscous Royal : agneau, poulet, légumes et tfaya (oignons, raisins secs caramélisés parfumés à la cannelle et fleur d'oranger) - (sur commande) - 200 DH">Couscous Royal : agneau, poulet, légumes et tfaya (oignons, raisins secs caramélisés parfumés à la cannelle et fleur d'oranger) - (sur commande) - 200 DH</option>
-			<option value="Les pâtes aux choix (penne, spaghetti, fusilli, conchiglie, pipe rigate ) • Avec Sauce bolognaise 60DH •Avec Sauce blanche 60DH">Les pâtes aux choix (penne, spaghetti, fusilli, conchiglie, pipe rigate ) • Avec Sauce bolognaise 60DH •Avec Sauce blanche 60DH</option>
-		  </optgroup>
-		  <optgroup label="Végétariens">
-			<option value="Tajine berbère * - 110 DH">Tajine berbère * - 110 DH</option>
-			<option value="Briouates (5 briques farcies aux légumes de saison) - 100 DH">Briouates (5 briques farcies aux légumes de saison) - 100 DH</option>
-			<option value="Pastilla aux légumes - 100 DH">Pastilla aux légumes - 100 DH</option>
-			<option value="Orange à la cannelle : 35 DH">Orange à la cannelle : 35 DH</option>
-			<option value="Salade de fruits à la fleur d’oranger : 50 DH">Salade de fruits à la fleur d’oranger : 50 DH</option>
-			<option value="Moëlleux au chocolat royal : 70 DH">Moëlleux au chocolat royal : 70 DH</option>
-			<option value="Thé ou café servi avec des pâtisseries marocaines : gateaux déférant : 40 DH">Thé ou café servi avec des pâtisseries marocaines : gateaux déférant : 40 DH</option>
-		  </optgroup>
-		  		  <optgroup label="LES ENTRÉES">
-			<option value="Salade berbère (tomates, poivrons, oignons et persil) – 35 DH">Salade berbère (tomates, poivrons, oignons et persil) – 35 DH</option>
-			<option value="Lentilles à l’échalotte et tomates – 30 DH">Lentilles à l’échalotte et tomates – 30 DH</option>
-			<option value="Omelette au choix (nature / fromage / aux herbes ) - 30 DH">Omelette au choix (nature / fromage / aux herbes ) - 30 DH</option>
-			<option value="Trio au choix parmi (sur commande) - 100 DH">Trio au choix parmi (sur commande) - 100 DH</option>
-		  </optgroup>
-		  <optgroup label="LA P’TITE FAIM">
-			<option value="Bol de semoule : 30 DH">Bol de semoule : 30 DH</option>
-			<option value="Assiette de frites : 35 DH">Assiette de frites : 35 DH</option>
-			<option value="Trio de tomates à l'huile d'olive - 35 DH">Trio de tomates à l'huile d'olive - 35 DH</option>
-			<option value="Kefta à la poêle - 45 DH">Kefta à la poêle - 45 DH</option>
-			<option value="Assiette de briouates (3 pièces) - 65 DH">Assiette de briouates (3 pièces) - 65 DH</option>
-			<option value="Harira berber (soupe traditionnelle marocaine - sans viande avec datte et chabakya) - 35 DH">Harira berber (soupe traditionnelle marocaine - sans viande avec datte et chabakya) - 35 DH</option>
-			<option value="Omelette nature - 30 DH">Omelette nature - 30 DH</option>
-			<option value="Omelette avec fromage, oignons ou champignons - 50 DH">Omelette avec fromage, oignons ou champignons - 50 DH</option>
-			<option value="Salade Chamali (riz, thon, tomates, salade verte, carottes, betteraves et œuf dur) - 70 DH">Salade Chamali (riz, thon, tomates, salade verte, carottes, betteraves et œuf dur) - 70 DH</option>
-			<option value="Sandwichs au choix (mixt-omelette-viande-fromage-saucisse) - 50 DH">Sandwichs au choix (mixt-omelette-viande-fromage-saucisse) - 50 DH</option>
-			<option value="Panini au choix (viande-poulet-saucisse-thon) - 45 DH">Panini au choix (viande-poulet-saucisse-thon) - 45 DH</option>
-			<option value="Tacos au choix (viande-poulet-saucisse-thon) - 50 DH">Tacos au choix (viande-poulet-saucisse-thon) - 50 DH</option>
-			<option value="Pizza au choix (thon, viande hachée, Margarita, végétarienne) - 50 DH">Pizza au choix (thon, viande hachée, Margarita, végétarienne) - 50 DH</option>
-		  </optgroup>
-		  <optgroup label="BOISSONS CHAUDES">
-			<option value="Café Noir – 10 DH">Café Noir – 10 DH</option>
-			<option value="Café noos-noos (café au lait) – 10 DH">Café noos-noos (café au lait) – 10 DH</option>
-			<option value="Café expresso - 20 DH">Café expresso - 20 DH</option>
-			<option value="Thé à la menthe – 15 DH">Thé à la menthe – 15 DH</option>
-			<option value="Thé normal – 10 DH">Thé normal – 10 DH</option>
-			<option value="Louisa (verveine) – 10 DH">Louisa (verveine) – 10 DH</option>
-		  </optgroup>
-		  <optgroup label="LES JUS MAISON">
-			<option value="Jus d’orange nature – 20 DH">Jus d’orange nature – 20 DH</option>
-			<option value="Jus de fruits frais (selon saison) : citron, fraises, melon, pomme, banane – 30 DH">Jus de fruits frais (selon saison) : citron, fraises, melon, pomme, banane – 30 DH</option>
-			<option value="Jus d'avocat – 30 DH">Jus d'avocat – 30 DH</option>
-			<option value="Jus d’avocat fruit sec – 35 DH">Jus d’avocat fruit sec – 35 DH</option>
-			<option value="Jus d’orange + carotte – 30 DH">Jus d’orange + carotte – 30 DH</option>
-			<option value="Jus de concombre au citron et thym – 20 DH">Jus de concombre au citron et thym – 20 DH</option>
-		  </optgroup>
-		  <optgroup label="EAUX MINERALES ET SODAS">
-			<option value="Eau minérale (plate ou gazeuse) 1.5 L. – 15 DH">Eau minérale (plate ou gazeuse) 1.5 L. – 15 DH</option>
-			<option value="Eau Bien-être (eau minérale plate ou gazeuse avec citron et concombre ou menthe) – 20 DH">Eau Bien-être (eau minérale plate ou gazeuse avec citron et concombre ou menthe) – 20 DH</option>
-			<option value="Coca cola - 15 DH">Coca cola - 15 DH</option>
-			<option value="Schweppes citron ou tonic – 20 DH">Schweppes citron ou tonic – 20 DH</option>
-		  </optgroup>
-		</select>
-			  <div class="controls">
-				<input type="text" id="Name" class="floatLabel" name="Name" placeholder="Nom">
-				<span id="nameError" class="error-message"></span>
-			  </div>
-			  <div class="controls">
-				<input type="text" id="LastName" class="floatLabel" name="LastName" placeholder="Prenom">
-				<span id="lastNameError" class="error-message"></span>
-			  </div>       
-			  <div class="controls">
-				<input type="tel" id="PhoneNumber" class="floatLabel" name="PhoneNumber" placeholder="Telephone   (Ex:+212 60300000)">
-				<span id="phoneNumberError" class="error-message"></span>
-			  </div>
-			  <div class="controls">
-				<input type="text" id="Country" class="floatLabel" name="Country" placeholder="Pays">
-				<span id="countryError" class="error-message"></span>
-			  </div>
-			</div>
-			<!-- Details -->
-			<div class="form-group">
-			  <h2 class="heading">Details</h2>
-			  <div class="grid">
-				<div class="col-1-4 col-1-4-sm">
-				  <div class="controls">
-					Jour De Reservation :
-					<input type="date" id="arrive" class="floatLabel" name="arrive" value="YYYY/MM/DD" placeholder="Reservation">
-					<span id="arriveError" class="error-message"></span>
-				  </div>      
-				</div>
-			  </div>
-			  <div class="grid">
-			  </div>
-			  <div class="grid">
-				<p class="info-text">Plus De details</p>
-				<br>
-				<div class="controls">
-				  <textarea name="CustomMessage" class="floatLabel" id="CustomMessage" placeholder="Custom Message"></textarea>
-				  <span id="customMessageError" class="error-message"></span>
-				</div>
-				<button type="submit" value="Submit" class="col-1-4">Submit</button>
-			  </div>  
-			</div>
-		  </form>
-		  <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999;">
-			<div id="successBox" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; text-align: center;">
-				<p>Merci Pour Votre Reservation Votre Numero d ordre : <span id="orderId"></span> </p>
-				<a id="downloadButton" download="reservation.pdf" href="#" style="display: none;">Telecharger Details Reservation</a>
-			</div>
-		</div>
-		<div id="loadingMessage" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 10px; z-index: 9999;">
-			<p>Attendez...</p>
-		</div>
-	  
-		<div id="itemDisplay"></div>
-		<p class="Price">Total Prix: <span id="totalPrice">0 DH</span></p>
-	  </div>
-	  <script>
-		document.getElementById("reservationForm").addEventListener("submit", function(event) {
-		  event.preventDefault(); // Prevent the form from submitting normally
-		  
-		  // Validate form inputs
-		  const loadingTimeout = setTimeout(function() {
-                const loadingMessage = document.getElementById("loadingMessage");
-                loadingMessage.style.display = "block";
-            }, 10);
-		  const name = document.getElementById("Name").value;
-		  const lastName = document.getElementById("LastName").value;
-		  const phoneNumber = document.getElementById("PhoneNumber").value;
-		  const country = document.getElementById("Country").value;
-		  const arrive = document.getElementById("arrive").value;
-		  const customMessage = document.getElementById("CustomMessage").value;
-	
-		  const nameError = document.getElementById("nameError");
-		  const lastNameError = document.getElementById("lastNameError");
-		  const phoneNumberError = document.getElementById("phoneNumberError");
-		  const countryError = document.getElementById("countryError");
-		  const arriveError = document.getElementById("arriveError");
-	
-		  nameError.textContent = "";
-		  lastNameError.textContent = "";
-		  phoneNumberError.textContent = "";
-		  countryError.textContent = "";
-		  arriveError.textContent = "";
-	
-		  let isValid = true;
-	
-		  if (!name) {
-			nameError.textContent = "Please enter your name";
-			isValid = false;
-		  }
-	
-		  if (!lastName) {
-			lastNameError.textContent = "Please enter your last name";
-			isValid = false;
-		  }
-	
-		  if (!phoneNumber) {
-			phoneNumberError.textContent = "Please enter your phone number";
-			isValid = false;
-		  }
-	
-		  if (!country) {
-			countryError.textContent = "Please enter your country";
-			isValid = false;
-		  }
-	
-		  if (!arrive) {
-			arriveError.textContent = "Please select a reservation date";
-			isValid = false;
-		  }
-	
-	
-		  if (!isValid) {
-			return; // Stop form submission if there are validation errors
-		  }
-	
-		  // Collect form data
-		  const formData = {
-			Name: name,
-			LastName: lastName,
-			PhoneNumber: phoneNumber,
-			Country: country,
-			Order: order, // Keeping it 1 for now
-			CustomMessage: customMessage,
-			Reservation: arrive
-		  };
 
-		  // Send POST request
-		  fetch("https://laplacerest.pythonanywhere.com/Create", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                return response.json();
-            })
-            .then(data => {
-            // Parse the success object from the response
-                const successData = JSON.parse(data.success.replace(/'/g, '"'));
-                const orderId = successData.success.OrderId;
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
-            // Update the HTML content with the extracted OrderId
-                document.getElementById('orderId').textContent = orderId;
-                const successUrl = data.success;
-                const overlay = document.getElementById("overlay");
-                const successBox = document.getElementById("successBox");
-                overlay.style.display = "block";
-                successBox.style.display = "block";
-                const downloadButton = document.getElementById("downloadButton");
-                downloadButton.href = successUrl;
-				clearTimeout(loadingTimeout);
-                const loadingMessage = document.getElementById("loadingMessage");
-                loadingMessage.style.display = "none";
-            })
-            .catch(error => {
-                console.error("There was a problem with your fetch operation:", error);
-            });
-        });
-	  </script>
-	  </body>
-	<!-- Footer -->
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<!-- Footer Logo -->
-				<div class="col-lg-3 footer_col">
-					<div class="footer_logo">
-						<div class="footer_logo_title">La Place</div>
-						<div class="footer_logo_subtitle">restaurant</div>
-					</div>
-					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-<!-- <p style="line-height: 1.2;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p> -->
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-				</div>
-				<!-- Footer About -->
-				<div class="col-lg-6 footer_col">
-					<div class="footer_about">
-						<p>La place est située dans le ksar ait-ben-haddou
-							À 30 kilomètres au nord de la ville d’Ouarzazate
-							Dans la vallée de l’ounila au sud de télouet,
-							Vallée qui était un point de passage.</p>
-					</div>
-				<div class="CONTACT">
-					<div><div class="footer_contact_title">Address:</div></div>
-					<div class="footer_contact_text">Restaurant La place a ait-ben-haddou Près de mosquée
-						ville de Ouarzazate 45000 –maroc-morocco.</div>
-					<div><div class="footer_contact_title">Telephone Maroc:</div></div>
-						<div class="footer_contact_text"> +212 0524890396 <br>+212 0661560086</div>
-					<div><div class="footer_contact_title">Telephone France:</div></div>
-						<div class="footer_contact_text"> +33 786515175</div>
-					<div><div class="footer_contact_title">Address:</div></div>
-						<div class="footer_contact_text">Restaurant_laplace@hotmail.com</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-</div>
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap-4.1.2/popper.js"></script>
-<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
-<script src="plugins/jquery-datepicker/jquery-ui.js"></script>
-<script src="plugins/jquery-timepicker/jquery.timepicker.js"></script>
-<script src="js/custom.js"></script>
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="/" class="brand" aria-label="Accueil">
+        <span class="brand-name">La Place</span>
+        <span class="brand-sub">Aït Ben Haddou</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">L'histoire</a></li>
+        <li><a href="#menu">La carte</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#visit">Nous trouver</a></li>
+        <li><a href="reservation.html" class="nav-cta">Réserver</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Aït Ben Haddou · Patrimoine UNESCO · Depuis 2003</p>
+          <h1 class="display">
+            La saveur<br />
+            d'un <em>ksar</em><br />
+            millénaire.
+          </h1>
+          <p class="lede">
+            Cuisine marocaine berbère, préparée avec amour et produits frais locaux.
+            Au cœur du village d'Aït Ben Haddou, à 30 km au nord d'Ouarzazate.
+          </p>
+          <div class="hero-cta">
+            <a href="reservation.html" class="btn btn-primary">Réserver une table</a>
+            <a href="#menu" class="btn btn-ghost">Voir la carte →</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img id="heroImg" src="images/PLACE3.jpg" alt="Le ksar d'Aït Ben Haddou, site classé UNESCO, vu depuis le restaurant La Place" loading="eager" onerror="this.src='images/hero-placeholder.svg'" />
+          <div class="hero-image-tag">
+            <span>N 31.0440°</span>
+            <span>W 7.1317°</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>· Cuisine berbère</span><span>· 21 ans d'expérience</span><span>· Produits locaux</span><span>· Tajines · Couscous · Pastilla</span><span>· Vue sur le ksar</span>
+          <span>· Cuisine berbère</span><span>· 21 ans d'expérience</span><span>· Produits locaux</span><span>· Tajines · Couscous · Pastilla</span><span>· Vue sur le ksar</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section id="about" class="about">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">01 — Notre histoire</p>
+          <h2 class="h2">Un restaurant au milieu d'un ksar millénaire.</h2>
+        </div>
+        <div class="about-body">
+          <p>
+            Aït Ben Haddou est un ksar classé au patrimoine mondial de l'UNESCO,
+            qui a servi de décor à de nombreux films — de <em>Lawrence d'Arabie</em> à <em>Gladiator</em>.
+          </p>
+          <p>
+            Forts de notre expérience de plus de 21 ans à la tête du restaurant berbère,
+            nous proposons aujourd'hui, dans notre tout nouveau restaurant marocain,
+            une cuisine pour tous les gourmands qui séjournent à Aït Ben Haddou.
+          </p>
+          <p>
+            Le temps d'un déjeuner ou d'un dîner, venez découvrir les saveurs de nos plats
+            typiquement marocains avec une touche berbère, préparés avec l'amour du métier.
+            Tous nos produits sont frais, et proviennent de producteurs locaux —
+            avec une préférence pour l'agriculture biologique.
+          </p>
+          <p>
+            Un salon et une terrasse vous accueillent&nbsp;: tables et canapés en bois,
+            murs anciens, plafonds traditionnels, lustres suspendus.
+            Le décor berbère, coloré et authentique.
+          </p>
+          <ul class="meta-list">
+            <li><strong>Cuisine</strong> Marocaine · Berbère</li>
+            <li><strong>Horaires</strong> Tous les jours, 11h – 22h</li>
+            <li><strong>Ambiance</strong> Authentique, familiale, chaleureuse</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">02 — La carte</p>
+          <h2 class="h2">Les saveurs de la maison</h2>
+          <p class="section-sub">
+            Une cuisine marocaine berbère, relevée par ses épices, si délicates à utiliser.
+            Carte complète au restaurant. Voici quelques spécialités.
+          </p>
+        </div>
+
+        <div class="menu-section">
+          <h3 class="menu-section-title">Les tajines & plats</h3>
+          <div class="menu-list">
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Tajine poulet façon La Place Beldi</span>
+                <span class="desc">Citrons confits faits maison et olives vertes</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">150 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Tajine de jarret d'agneau</span>
+                <span class="desc">Petits pois et fonds d'artichauts</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">150 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Tajine de bœuf aux pruneaux</span>
+                <span class="desc">Pruneaux caramélisés et amandes</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">150 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Couscous Royal</span>
+                <span class="desc">Agneau, poulet, légumes et tfaya — sur commande</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">200 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Tajine de kefta</span>
+                <span class="desc">Tomate fraîche, œufs et épices du chef</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">110 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">3 Brochettes de poulet</span>
+                <span class="desc">Riz, semoule, frites ou haricots verts frais</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">120 DH</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-section">
+          <h3 class="menu-section-title">Végétariens</h3>
+          <div class="menu-list">
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Tajine berbère</span>
+                <span class="desc">Légumes de saison</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">110 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Pastilla aux légumes</span>
+                <span class="desc">Feuilleté traditionnel salé-sucré</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">100 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Briouates aux légumes</span>
+                <span class="desc">5 briques farcies aux légumes de saison</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">100 DH</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-section">
+          <h3 class="menu-section-title">Formules</h3>
+          <div class="formulas">
+            <div class="formula">
+              <p class="formula-label">Midi</p>
+              <ul>
+                <li><span>Entrée + plat + dessert</span> <span>200 DH</span></li>
+                <li><span>Entrée + plat</span> <span>170 DH</span></li>
+                <li><span>Plat + dessert</span> <span>170 DH</span></li>
+              </ul>
+            </div>
+            <div class="formula">
+              <p class="formula-label">Soir</p>
+              <ul>
+                <li><span>Entrée + plat + dessert</span> <span>220 DH</span></li>
+                <li><span>Entrée + plat</span> <span>200 DH</span></li>
+                <li><span>Plat + dessert</span> <span>200 DH</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <p class="menu-foot">
+          Carte complète sur place — entrées, p'tite faim, boissons chaudes, jus maison, sodas.
+          <br />Plats végétariens et adaptations sur demande.
+        </p>
+      </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">03 — En images</p>
+          <h2 class="h2">Le restaurant & le ksar</h2>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Rempli par script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- VISITER -->
+    <section id="visit" class="visit">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">04 — Nous trouver</p>
+          <h2 class="h2">Au pied du ksar.</h2>
+          <address class="visit-address">
+            <p><strong>Restaurant La Place</strong></p>
+            <p>Aït Ben Haddou, près de la mosquée<br />
+              45000 Ouarzazate, Maroc</p>
+            <p class="contact-block">
+              <span>Maroc&nbsp;:</span>
+              <a href="tel:+212524890396">+212 524 890 396</a><br />
+              <a href="tel:+212661560086">+212 661 560 086</a>
+            </p>
+            <p class="contact-block">
+              <span>France&nbsp;:</span>
+              <a href="tel:+33786515175">+33 7 86 51 51 75</a>
+            </p>
+            <p class="contact-block">
+              <span>Email&nbsp;:</span>
+              <a href="mailto:Restaurant_laplace@hotmail.com">Restaurant_laplace@hotmail.com</a>
+            </p>
+            <p><strong>Ouvert tous les jours · 11h – 22h</strong></p>
+          </address>
+          <a href="https://maps.app.goo.gl/17X4184PW7uEgDff9" target="_blank" rel="noopener" class="btn btn-ghost">Ouvrir dans Google Maps →</a>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            title="Carte de localisation du restaurant La Place à Aït Ben Haddou"
+            src="https://maps.google.com/maps?q=31.0439639,-7.1316642&hl=fr&z=17&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA RÉSERVATION -->
+    <section class="booking-cta">
+      <div class="container">
+        <h2 class="h2-large">Réservez votre table.</h2>
+        <p>Confirmation directe par WhatsApp — réponse rapide.</p>
+        <a href="reservation.html" class="btn btn-primary btn-large">Réserver maintenant →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="brand-foot">La Place</p>
+        <p class="foot-small">Restaurant marocain berbère · Aït Ben Haddou</p>
+      </div>
+      <div>
+        <p class="foot-label">Adresse</p>
+        <p>Aït Ben Haddou<br />45000 Ouarzazate<br />Maroc</p>
+      </div>
+      <div>
+        <p class="foot-label">Contact</p>
+        <p><a href="tel:+212661560086">+212 661 560 086</a></p>
+        <p><a href="tel:+33786515175">+33 7 86 51 51 75</a></p>
+        <p><a href="mailto:Restaurant_laplace@hotmail.com">Email</a></p>
+      </div>
+      <div>
+        <p class="foot-label">Heures</p>
+        <p>Tous les jours<br />11h – 22h</p>
+      </div>
+    </div>
+    <div class="container foot-bottom">
+      <p>© <span id="year"></span> Restaurant La Place · Aït Ben Haddou</p>
+      <p>Patrimoine UNESCO · Cuisine berbère depuis 2003</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestion des photos — La Place</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #f4ede0;
+      color: #2a1810;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+    .admin-wrap { max-width: 900px; margin: 0 auto; }
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .subtitle { color: #6e5847; margin-bottom: 2.5rem; }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+    }
+
+    .gate { max-width: 400px; margin: 4rem auto; }
+    .gate input {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid #d4c5b0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      margin-bottom: 1rem;
+    }
+    .gate button {
+      width: 100%;
+      padding: 0.85rem;
+      background: #a0522d;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    .gate button:hover { background: #84411f; }
+
+    .section-title { font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600; }
+
+    .uploader {
+      border: 2px dashed #d4c5b0;
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all .2s;
+      background: #faf6ee;
+      display: block;
+    }
+    .uploader:hover, .uploader.drag {
+      border-color: #a0522d;
+      background: #fef3e7;
+    }
+    .uploader p { margin: 0.5rem 0; }
+    .uploader .big { font-size: 1.1rem; font-weight: 600; }
+    .uploader .small { font-size: 0.875rem; color: #6e5847; }
+    .uploader input[type=file] { display: none; }
+
+    .category-select { margin-bottom: 1.5rem; }
+    .category-select label { display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.9rem; }
+    .category-select select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #d4c5b0;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: #fff;
+    }
+
+    .status {
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      display: none;
+    }
+    .status.show { display: block; }
+    .status.success { background: #e6f4ea; color: #1e6b3a; }
+    .status.error { background: #fbe9e7; color: #8a2c1a; }
+    .status.info { background: #fef3e7; color: #84411f; }
+
+    .image-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .image-item {
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #eee;
+    }
+    .image-item img { width: 100%; height: 100%; object-fit: cover; }
+    .image-item .meta {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      color: #fff;
+      padding: 0.75rem 0.5rem 0.5rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .image-item .del-btn {
+      position: absolute;
+      top: 0.5rem; right: 0.5rem;
+      background: rgba(255,255,255,0.95);
+      border: none;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .image-item .del-btn:hover { background: #fff; color: #a0522d; }
+
+    .filter-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .filter-tabs button {
+      padding: 0.5rem 1rem;
+      background: #f4ede0;
+      border: 1px solid #d4c5b0;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.85rem;
+    }
+    .filter-tabs button.active {
+      background: #2a1810;
+      color: #fff;
+      border-color: #2a1810;
+    }
+
+    .help {
+      background: #fef3e7;
+      border-left: 3px solid #a0522d;
+      padding: 1rem 1.25rem;
+      border-radius: 4px;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .help strong { color: #a0522d; }
+
+    .logout {
+      background: transparent;
+      border: 1px solid #d4c5b0;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: inherit;
+      float: right;
+    }
+
+    .config-warn {
+      background: #fff8e1;
+      border-left: 3px solid #f57c00;
+      padding: 1rem 1.25rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 1.5rem 1.25rem; }
+      h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ÉCRAN DE CONNEXION -->
+  <div id="gate" class="gate card">
+    <h1>Espace photos</h1>
+    <p class="subtitle">Entrez le mot de passe.</p>
+    <input type="password" id="pwInput" placeholder="Mot de passe" />
+    <button id="pwBtn">Entrer</button>
+    <p id="pwErr" style="color:#a0522d; margin-top:0.75rem; display:none; font-size:0.875rem;">
+      Mot de passe incorrect.
+    </p>
+  </div>
+
+  <!-- APPLICATION -->
+  <div id="app" class="admin-wrap" style="display:none;">
+    <button class="logout" id="logoutBtn">Déconnexion</button>
+    <h1>Gestion des photos</h1>
+    <p class="subtitle">Ajoutez ou supprimez les photos du site.</p>
+
+    <div class="config-warn" id="configWarn" style="display:none;">
+      <strong>⚠ Configuration requise&nbsp;:</strong> Cloudinary et JSONBin ne sont pas configurés.
+      Ouvrez <code>admin.js</code> et complétez les valeurs en haut avant d'utiliser cette page.
+    </div>
+
+    <div class="help">
+      <strong>Comment ça marche&nbsp;:</strong> choisissez la catégorie, glissez votre photo, et elle apparaît sur le site en quelques secondes.
+      Aucune compétence technique requise. Les photos sont stockées en sécurité sur le cloud.
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Ajouter une photo</h2>
+
+      <div class="category-select">
+        <label for="category">Où placer cette photo&nbsp;?</label>
+        <select id="category">
+          <option value="hero">Image principale (en-tête de la page d'accueil)</option>
+          <option value="gallery">Galerie</option>
+          <option value="menu">Photo de plat</option>
+        </select>
+      </div>
+
+      <label for="fileInput" class="uploader" id="uploader">
+        <p class="big">📷 Cliquez ou déposez une photo ici</p>
+        <p class="small">JPG, PNG ou WebP · Max 10 Mo</p>
+        <input type="file" id="fileInput" accept="image/*" />
+      </label>
+
+      <div id="status" class="status"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Photos existantes</h2>
+
+      <div class="filter-tabs" id="filterTabs">
+        <button class="active" data-cat="all">Toutes</button>
+        <button data-cat="hero">Principale</button>
+        <button data-cat="gallery">Galerie</button>
+        <button data-cat="menu">Plats</button>
+      </div>
+
+      <div id="imageList" class="image-list">
+        <p style="color:#6e5847; grid-column:1/-1;">Chargement...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

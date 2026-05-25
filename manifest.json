@@ -1,0 +1,17 @@
+{
+  "name": "Restaurant La Place — Aït Ben Haddou",
+  "short_name": "La Place",
+  "description": "Restaurant marocain berbère au ksar d'Aït Ben Haddou",
+  "start_url": "/LaPlace/",
+  "display": "standalone",
+  "background_color": "#f4ede0",
+  "theme_color": "#a0522d",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
