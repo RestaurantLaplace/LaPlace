@@ -13,8 +13,8 @@ const CONFIG = {
   WHATSAPP_NUMBER: '212661560086',
 
   // JSONBin (optionnel) — voir README pour la configuration
-  JSONBIN_ID: '',
-  JSONBIN_READ_KEY: '',
+  JSONBIN_ID: '6a140eceee5a733b1217854e',
+  JSONBIN_READ_KEY: '$2a$10$afkCtW9z9F6DKezv/wIti.Fvw6E8.37zIkl1Tit8AuzIg1R3590im',
 
   // Nom du restaurant (utilisé dans le message WhatsApp)
   RESTAURANT_NAME: 'Restaurant La Place',
