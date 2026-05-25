@@ -4,51 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- SEO PRIMAIRE -->
   <title>Restaurant La Place — Cuisine Marocaine Berbère à Aït Ben Haddou, Ouarzazate</title>
-  <meta name="description" content="Restaurant La Place, au cœur du ksar d'Aït Ben Haddou classé UNESCO. Cuisine marocaine berbère authentique, tajines, couscous royal. 21 ans d'expérience. Réservation directe par WhatsApp." />
-  <meta name="keywords" content="restaurant Aït Ben Haddou, restaurant Ouarzazate, cuisine berbère, tajine Maroc, restaurant ksar, La Place" />
+  <meta name="description" content="Restaurant La Place, au cœur du ksar d'Aït Ben Haddou classé UNESCO. Cuisine marocaine berbère authentique, tajines, couscous royal, terrasse avec vue. 21 ans d'expérience. Réservation directe par WhatsApp." />
+  <meta name="keywords" content="restaurant Aït Ben Haddou, restaurant Ouarzazate, cuisine berbère, tajine Maroc, restaurant ksar, où manger Aït Ben Haddou, restaurant UNESCO Maroc, La Place" />
+  <meta name="author" content="Restaurant La Place" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://restaurantlaplace.github.io/LaPlace/" />
 
+  <!-- OPEN GRAPH -->
   <meta property="og:type" content="restaurant.restaurant" />
   <meta property="og:title" content="Restaurant La Place — Aït Ben Haddou" />
   <meta property="og:description" content="Cuisine marocaine berbère au cœur du ksar d'Aït Ben Haddou, site UNESCO." />
   <meta property="og:image" content="https://restaurantlaplace.github.io/LaPlace/images/PLACE3.jpg" />
   <meta property="og:url" content="https://restaurantlaplace.github.io/LaPlace/" />
   <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Restaurant La Place" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Restaurant La Place — Aït Ben Haddou" />
+  <meta name="twitter:description" content="Cuisine marocaine berbère au ksar UNESCO d'Aït Ben Haddou." />
   <meta name="twitter:image" content="https://restaurantlaplace.github.io/LaPlace/images/PLACE3.jpg" />
 
+  <!-- GÉO -->
   <meta name="geo.region" content="MA-09" />
   <meta name="geo.placename" content="Aït Ben Haddou, Ouarzazate" />
   <meta name="geo.position" content="31.0439639;-7.1316642" />
   <meta name="ICBM" content="31.0439639, -7.1316642" />
 
+  <!-- ICONES -->
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-  <meta name="theme-color" content="#1a1208" />
+  <meta name="theme-color" content="#a0522d" />
   <link rel="manifest" href="manifest.json" />
 
+  <!-- POLICES -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 
+  <!-- DONNÉES STRUCTURÉES -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Restaurant La Place",
     "alternateName": "Café restaurant laplace",
-    "image": "https://restaurantlaplace.github.io/LaPlace/images/PLACE3.jpg",
+    "image": [
+      "https://restaurantlaplace.github.io/LaPlace/images/PLACE3.jpg",
+      "https://restaurantlaplace.github.io/LaPlace/images/PLACE2.jpg"
+    ],
     "@id": "https://restaurantlaplace.github.io/LaPlace/",
     "url": "https://restaurantlaplace.github.io/LaPlace/",
     "telephone": "+212661560086",
     "email": "Restaurant_laplace@hotmail.com",
     "priceRange": "$$",
     "servesCuisine": ["Moroccan", "Berber", "Mediterranean"],
+    "description": "Restaurant marocain berbère situé dans le ksar d'Aït Ben Haddou, classé au patrimoine mondial de l'UNESCO. 21 ans d'expérience.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Près de la mosquée, Aït Ben Haddou",
@@ -67,209 +80,321 @@
       "opens": "11:00",
       "closes": "22:00"
     }],
-    "acceptsReservations": "True"
+    "acceptsReservations": "True",
+    "menu": "https://restaurantlaplace.github.io/LaPlace/#menu"
   }
   </script>
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo-wrap">
-      <div class="logo-diamond" aria-hidden="true">
-        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M30 2L58 30L30 58L2 30L30 2Z" fill="#1a1208"/>
-          <path d="M30 10L50 30L30 50L10 30L30 10Z" fill="#f4ede0"/>
-          <path d="M30 18L42 30L30 42L18 30L30 18Z" fill="#1a1208"/>
-        </svg>
-      </div>
-      <div class="logo-text">LA PLACE</div>
-      <div class="logo-sub">AÏT BEN HADDOU</div>
-    </div>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="/" class="brand" aria-label="Accueil">
+        <span class="brand-name">La Place</span>
+        <span class="brand-sub">Aït Ben Haddou</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">L'histoire</a></li>
+        <li><a href="#menu">La carte</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#visit">Nous trouver</a></li>
+        <li><a href="reservation.html" class="nav-cta">Réserver</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
   </header>
 
-  <!-- HERO IMAGE -->
-  <div class="hero-img-wrap">
-    <img id="heroImg"
-      src="images/PLACE3.jpg"
-      alt="Le ksar d'Aït Ben Haddou, site UNESCO — Restaurant La Place"
-      onerror="this.src='images/hero-placeholder.svg'"
-    />
-    <div class="hero-overlay"></div>
-  </div>
+  <main id="main">
 
-  <!-- BOOKING SECTION -->
-  <main class="booking-section">
-    <h1 class="booking-title">
-      RÉSERVEZ<br />VOTRE TABLE&nbsp;!
-    </h1>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Aït Ben Haddou · Patrimoine UNESCO · Depuis 2003</p>
+          <h1 class="display">
+            La saveur<br />
+            d'un <em>ksar</em><br />
+            millénaire.
+          </h1>
+          <p class="lede">
+            Cuisine marocaine berbère, préparée avec amour et produits frais locaux.
+            Au cœur du village d'Aït Ben Haddou, à 30 km au nord d'Ouarzazate.
+          </p>
+          <div class="hero-cta">
+            <a href="reservation.html" class="btn btn-primary">Réserver une table</a>
+            <a href="#menu" class="btn btn-ghost">Voir la carte →</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img id="heroImg" src="images/PLACE3.jpg" alt="Le ksar d'Aït Ben Haddou, site classé UNESCO, vu depuis le restaurant La Place" loading="eager" onerror="this.src='images/hero-placeholder.svg'" />
+          <div class="hero-image-tag">
+            <span>N 31.0440°</span>
+            <span>W 7.1317°</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>· Cuisine berbère</span><span>· 21 ans d'expérience</span><span>· Produits locaux</span><span>· Tajines · Couscous · Pastilla</span><span>· Vue sur le ksar</span>
+          <span>· Cuisine berbère</span><span>· 21 ans d'expérience</span><span>· Produits locaux</span><span>· Tajines · Couscous · Pastilla</span><span>· Vue sur le ksar</span>
+        </div>
+      </div>
+    </section>
 
-    <div class="info-row">
-      <div class="info-item">
-        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 21s-8-5.5-8-11a8 8 0 1 1 16 0c0 5.5-8 11-8 11z"/>
-          <circle cx="12" cy="10" r="2.5"/>
-        </svg>
-        <span>Aït Ben Haddou, près de la mosquée,<br />Ouarzazate 45000</span>
+    <!-- À PROPOS -->
+    <section id="about" class="about">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">01 — Notre histoire</p>
+          <h2 class="h2">Un restaurant au milieu d'un ksar millénaire.</h2>
+        </div>
+        <div class="about-body">
+          <p>
+            Aït Ben Haddou est un ksar classé au patrimoine mondial de l'UNESCO,
+            qui a servi de décor à de nombreux films — de <em>Lawrence d'Arabie</em> à <em>Gladiator</em>.
+          </p>
+          <p>
+            Forts de notre expérience de plus de 21 ans à la tête du restaurant berbère,
+            nous proposons aujourd'hui, dans notre tout nouveau restaurant marocain,
+            une cuisine pour tous les gourmands qui séjournent à Aït Ben Haddou.
+          </p>
+          <p>
+            Le temps d'un déjeuner ou d'un dîner, venez découvrir les saveurs de nos plats
+            typiquement marocains avec une touche berbère, préparés avec l'amour du métier.
+            Tous nos produits sont frais, et proviennent de producteurs locaux —
+            avec une préférence pour l'agriculture biologique.
+          </p>
+          <p>
+            Un salon et une terrasse vous accueillent&nbsp;: tables et canapés en bois,
+            murs anciens, plafonds traditionnels, lustres suspendus.
+            Le décor berbère, coloré et authentique.
+          </p>
+          <ul class="meta-list">
+            <li><strong>Cuisine</strong> Marocaine · Berbère</li>
+            <li><strong>Horaires</strong> Tous les jours, 11h – 22h</li>
+            <li><strong>Ambiance</strong> Authentique, familiale, chaleureuse</li>
+          </ul>
+        </div>
       </div>
-      <div class="info-item">
-        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="12" cy="12" r="9"/>
-          <path d="M12 7v5l3 3"/>
-        </svg>
-        <span>11:00 – 22:00</span>
-      </div>
-      <div class="info-item info-menu" id="menuToggle">
-        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M3 6h18M3 12h18M3 18h18"/>
-        </svg>
-        <span class="menu-link">Voir la carte</span>
-      </div>
-    </div>
+    </section>
 
-    <!-- BOOKING FORM -->
-    <form class="booking-form" id="bookingForm" novalidate>
-      <div class="form-fields">
-        <div class="form-field">
-          <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="4" width="18" height="18" rx="2"/>
-            <path d="M16 2v4M8 2v4M3 10h18"/>
-          </svg>
-          <input type="date" id="date" name="date" required />
+    <!-- MENU -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">02 — La carte</p>
+          <h2 class="h2">Les saveurs de la maison</h2>
+          <p class="section-sub">
+            Une cuisine marocaine berbère, relevée par ses épices, si délicates à utiliser.
+            Carte complète au restaurant. Voici quelques spécialités.
+          </p>
         </div>
 
-        <div class="form-field">
-          <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-          <div class="guest-counter">
-            <button type="button" class="counter-btn" data-act="dec">−</button>
-            <span id="guestDisplay">2 personnes</span>
-            <input type="hidden" id="guests" name="guests" value="2" />
-            <button type="button" class="counter-btn" data-act="inc">+</button>
+        <div class="menu-section">
+          <h3 class="menu-section-title">Les tajines & plats</h3>
+          <div class="menu-list">
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Tajine poulet façon La Place Beldi</span>
+                <span class="desc">Citrons confits faits maison et olives vertes</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">150 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Tajine de jarret d'agneau</span>
+                <span class="desc">Petits pois et fonds d'artichauts</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">150 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Tajine de bœuf aux pruneaux</span>
+                <span class="desc">Pruneaux caramélisés et amandes</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">150 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Couscous Royal</span>
+                <span class="desc">Agneau, poulet, légumes et tfaya — sur commande</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">200 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Tajine de kefta</span>
+                <span class="desc">Tomate fraîche, œufs et épices du chef</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">110 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">3 Brochettes de poulet</span>
+                <span class="desc">Riz, semoule, frites ou haricots verts frais</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">120 DH</span>
+            </div>
           </div>
         </div>
 
-        <div class="form-field">
-          <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M12 7v5l3 3"/>
-          </svg>
-          <select id="time" name="time" required>
-            <option value="">Heure</option>
-            <option>11:30</option><option>12:00</option><option>12:30</option>
-            <option>13:00</option><option>13:30</option><option>14:00</option>
-            <option>14:30</option><option>15:00</option><option>15:30</option>
-            <option>16:00</option><option>16:30</option><option>17:00</option>
-            <option>18:00</option><option>18:30</option><option>19:00</option>
-            <option>19:30</option><option>20:00</option><option>20:30</option>
-            <option>21:00</option><option>21:30</option>
-          </select>
+        <div class="menu-section">
+          <h3 class="menu-section-title">Végétariens</h3>
+          <div class="menu-list">
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Tajine berbère</span>
+                <span class="desc">Légumes de saison</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">110 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Pastilla aux légumes</span>
+                <span class="desc">Feuilleté traditionnel salé-sucré</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">100 DH</span>
+            </div>
+            <div class="menu-row">
+              <div class="menu-row-left">
+                <span class="dish">Briouates aux légumes</span>
+                <span class="desc">5 briques farcies aux légumes de saison</span>
+              </div>
+              <span class="dots" aria-hidden="true"></span>
+              <span class="price">100 DH</span>
+            </div>
+          </div>
         </div>
 
-        <button type="submit" class="find-btn" id="submitBtn">
-          Trouver<br />une table
-        </button>
-      </div>
+        <div class="menu-section">
+          <h3 class="menu-section-title">Formules</h3>
+          <div class="formulas">
+            <div class="formula">
+              <p class="formula-label">Midi</p>
+              <ul>
+                <li><span>Entrée + plat + dessert</span> <span>200 DH</span></li>
+                <li><span>Entrée + plat</span> <span>170 DH</span></li>
+                <li><span>Plat + dessert</span> <span>170 DH</span></li>
+              </ul>
+            </div>
+            <div class="formula">
+              <p class="formula-label">Soir</p>
+              <ul>
+                <li><span>Entrée + plat + dessert</span> <span>220 DH</span></li>
+                <li><span>Entrée + plat</span> <span>200 DH</span></li>
+                <li><span>Plat + dessert</span> <span>200 DH</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-      <div class="form-name-row">
-        <div class="form-field field-name">
-          <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-          <input type="text" id="name" name="name" placeholder="Votre nom" required autocomplete="name" />
+        <p class="menu-foot">
+          Carte complète sur place — entrées, p'tite faim, boissons chaudes, jus maison, sodas.
+          <br />Plats végétariens et adaptations sur demande.
+        </p>
+      </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">03 — En images</p>
+          <h2 class="h2">Le restaurant & le ksar</h2>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Rempli par script.js -->
         </div>
       </div>
+    </section>
 
-      <p class="form-error" id="formError"></p>
-      <p class="form-note">Confirmation directe via WhatsApp · Réponse rapide</p>
-    </form>
+    <!-- VISITER -->
+    <section id="visit" class="visit">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">04 — Nous trouver</p>
+          <h2 class="h2">Au pied du ksar.</h2>
+          <address class="visit-address">
+            <p><strong>Restaurant La Place</strong></p>
+            <p>Aït Ben Haddou, près de la mosquée<br />
+              45000 Ouarzazate, Maroc</p>
+            <p class="contact-block">
+              <span>Maroc&nbsp;:</span>
+              <a href="tel:+212524890396">+212 524 890 396</a><br />
+              <a href="tel:+212661560086">+212 661 560 086</a>
+            </p>
+            <p class="contact-block">
+              <span>France&nbsp;:</span>
+              <a href="tel:+33786515175">+33 7 86 51 51 75</a>
+            </p>
+            <p class="contact-block">
+              <span>Email&nbsp;:</span>
+              <a href="mailto:Restaurant_laplace@hotmail.com">Restaurant_laplace@hotmail.com</a>
+            </p>
+            <p><strong>Ouvert tous les jours · 11h – 22h</strong></p>
+          </address>
+          <a href="https://maps.app.goo.gl/17X4184PW7uEgDff9" target="_blank" rel="noopener" class="btn btn-ghost">Ouvrir dans Google Maps →</a>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            title="Carte de localisation du restaurant La Place à Aït Ben Haddou"
+            src="https://maps.google.com/maps?q=31.0439639,-7.1316642&hl=fr&z=17&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA RÉSERVATION -->
+    <section class="booking-cta">
+      <div class="container">
+        <h2 class="h2-large">Réservez votre table.</h2>
+        <p>Confirmation directe par WhatsApp — réponse rapide.</p>
+        <a href="reservation.html" class="btn btn-primary btn-large">Réserver maintenant →</a>
+      </div>
+    </section>
   </main>
 
-  <!-- MENU MODAL -->
-  <div class="menu-modal" id="menuModal" aria-hidden="true">
-    <div class="menu-modal-inner">
-      <button class="modal-close" id="modalClose" aria-label="Fermer">×</button>
-      <h2 class="modal-title">La Carte</h2>
-
-      <div class="modal-section">
-        <h3>Tajines & plats</h3>
-        <div class="modal-items">
-          <div class="modal-item"><span>Tajine poulet La Place Beldi</span><span>150 DH</span></div>
-          <div class="modal-item"><span>Tajine jarret d'agneau</span><span>150 DH</span></div>
-          <div class="modal-item"><span>Tajine bœuf aux pruneaux</span><span>150 DH</span></div>
-          <div class="modal-item"><span>Tajine viande figues & dattes</span><span>140 DH</span></div>
-          <div class="modal-item"><span>Tajine kefta à la tomate</span><span>110 DH</span></div>
-          <div class="modal-item"><span>Couscous Royal (sur commande)</span><span>200 DH</span></div>
-          <div class="modal-item"><span>3 Brochettes de poulet</span><span>120 DH</span></div>
-        </div>
-      </div>
-
-      <div class="modal-section">
-        <h3>Végétariens</h3>
-        <div class="modal-items">
-          <div class="modal-item"><span>Tajine berbère</span><span>110 DH</span></div>
-          <div class="modal-item"><span>Pastilla aux légumes</span><span>100 DH</span></div>
-          <div class="modal-item"><span>Briouates aux légumes</span><span>100 DH</span></div>
-        </div>
-      </div>
-
-      <div class="modal-section">
-        <h3>Formules</h3>
-        <div class="modal-items">
-          <div class="modal-item"><span>Midi — Entrée + plat + dessert</span><span>200 DH</span></div>
-          <div class="modal-item"><span>Midi — Entrée + plat</span><span>170 DH</span></div>
-          <div class="modal-item"><span>Soir — Entrée + plat + dessert</span><span>220 DH</span></div>
-          <div class="modal-item"><span>Soir — Entrée + plat</span><span>200 DH</span></div>
-        </div>
-      </div>
-
-      <div class="modal-section">
-        <h3>Entrées & p'tite faim</h3>
-        <div class="modal-items">
-          <div class="modal-item"><span>Salade berbère</span><span>35 DH</span></div>
-          <div class="modal-item"><span>Harira berbère</span><span>35 DH</span></div>
-          <div class="modal-item"><span>Trio (sur commande)</span><span>100 DH</span></div>
-          <div class="modal-item"><span>Salade Chamali</span><span>70 DH</span></div>
-        </div>
-      </div>
-
-      <div class="modal-section">
-        <h3>Desserts & boissons</h3>
-        <div class="modal-items">
-          <div class="modal-item"><span>Moëlleux au chocolat royal</span><span>70 DH</span></div>
-          <div class="modal-item"><span>Thé/Café + pâtisseries</span><span>40 DH</span></div>
-          <div class="modal-item"><span>Thé à la menthe</span><span>15 DH</span></div>
-          <div class="modal-item"><span>Jus d'orange nature</span><span>20 DH</span></div>
-          <div class="modal-item"><span>Jus d'avocat</span><span>30 DH</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal-backdrop" id="modalBackdrop"></div>
-
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-cols">
+  <footer class="site-footer">
+    <div class="container footer-grid">
       <div>
-        <p class="footer-label">Téléphone</p>
-        <p><a href="tel:+212524890396">+212 524 890 396</a></p>
+        <p class="brand-foot">La Place</p>
+        <p class="foot-small">Restaurant marocain berbère · Aït Ben Haddou</p>
+      </div>
+      <div>
+        <p class="foot-label">Adresse</p>
+        <p>Aït Ben Haddou<br />45000 Ouarzazate<br />Maroc</p>
+      </div>
+      <div>
+        <p class="foot-label">Contact</p>
         <p><a href="tel:+212661560086">+212 661 560 086</a></p>
         <p><a href="tel:+33786515175">+33 7 86 51 51 75</a></p>
+        <p><a href="mailto:Restaurant_laplace@hotmail.com">Email</a></p>
       </div>
       <div>
-        <p class="footer-label">Email</p>
-        <p><a href="mailto:Restaurant_laplace@hotmail.com">Restaurant_laplace@hotmail.com</a></p>
-      </div>
-      <div>
-        <p class="footer-label">Horaires</p>
-        <p>Tous les jours<br />11:00 – 22:00</p>
+        <p class="foot-label">Heures</p>
+        <p>Tous les jours<br />11h – 22h</p>
       </div>
     </div>
-    <p class="footer-copy">© <span id="year"></span> Restaurant La Place · Aït Ben Haddou · Patrimoine UNESCO</p>
+    <div class="container foot-bottom">
+      <p>© <span id="year"></span> Restaurant La Place · Aït Ben Haddou</p>
+      <p>Patrimoine UNESCO · Cuisine berbère depuis 2003</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
